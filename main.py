@@ -1,9 +1,10 @@
 
 from login import login_admin
-from penghuni import menu_penghuni
-from riwayat_sewa import tampilkan_riwayat
-from kamar import menu_kamar
 from member import login_member
+from penghuni import menu_penghuni
+from kamar import menu_kamar
+from riwayat_sewa import tampilkan_riwayat
+
 
 def menu_utama():
     while True:
@@ -32,12 +33,8 @@ def menu_utama():
             print("Pilihan tidak valid!")
 
 
-menu_utama()
-
-
-
 def menu_admin():
-     while True:
+    while True:
         print("\n========== MENU ADMIN ==========")
         print("1. Data Penghuni")
         print("2. Data Kamar")
@@ -50,11 +47,11 @@ def menu_admin():
             menu_penghuni()
 
         elif pilihan == "2":
-             menu_kamar()
-            
+            menu_kamar()
+
         elif pilihan == "3":
-             tampilkan_riwayat()
-            
+            tampilkan_riwayat()
+
         elif pilihan == "4":
             print("Berhasil logout!")
             break
@@ -63,7 +60,5 @@ def menu_admin():
             print("Pilihan tidak valid!")
 
 
-
+# Jalankan program paling akhir
 menu_utama()
-if login_admin():
-    menu_admin()
